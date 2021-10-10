@@ -10,6 +10,7 @@ class MyAppViewModel extends ChangeNotifier {
   MyAppViewModel(this.store) {
     store.onChange.listen((event) {
       logger.info("state変わったよ");
+      notifyListeners();
     });
   }
 }

@@ -81,7 +81,7 @@ class MyHomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final model = Provider.of<MyAppViewModel>(context);
+    final model = Provider.of<MyAppViewModel>(context, listen: false);
     final pageController = PageController(initialPage: 0, keepPage: true);
 
     logger.info("MyHomePage");

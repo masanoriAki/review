@@ -15,13 +15,13 @@ class UserAddNameEtcPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final _model = Provider.of<MyAppViewModel>(context, listen: false);
     final _defaultTextTheme = Theme.of(context).textTheme;
+    context.select((MyAppViewModel _model) => _model.store.state.age);
     final _titleStyle = _defaultTextTheme.subtitle1?.copyWith(
       fontWeight: FontWeight.bold,
       color: Colors.teal,
     );
 
     logger.info("UserAddNameEtcPage");
-    logger.info(store.state.name);
 
     return GestureDetector(
       onTap: () {
